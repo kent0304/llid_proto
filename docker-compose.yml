@@ -1,0 +1,75 @@
+version: "3.7"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      args:
+        project_directory: "/backend_projects/"
+    ports:
+      - "5000:5000"
+    expose:
+      - "5000"
+    volumes:
+      - "./backend:/backend_projects"
+    links:
+      - gector_flask
+      - semantic_flask
+    tty: true
+    environment:
+      TZ: "Asia/Tokyo"
+      FLASK_ENV: "development"
+    command: "flask run --host 0.0.0.0 --port 5000"
+
+  semantic_flask:
+    build:
+      context: ./semantic
+      args:
+        project_directory: "/semantic_projects/"
+    ports:
+      - "5001:5001"
+    expose:
+      - "5001"
+    volumes:
+      - "./semantic:/semantic_projects"
+    tty: true
+    environment:
+      TZ: "Asia/Tokyo"
+      FLASK_ENV: "development"
+    command: "flask run --host 0.0.0.0 --port 5001"
+
+  gector_flask:
+    build:
+      context: ./gector
+      args:
+        project_directory: "/gector_projects/"
+    ports:
+      - "5002:5002"
+    expose:
+      - "5002"
+    volumes:
+      - "./gector:/gector_projects"
+    tty: true
+    environment:
+      TZ: "Asia/Tokyo"
+      FLASK_ENV: "development"
+    command: "flask run --host 0.0.0.0 --port 5002"
+
+  front:
+    build:
+      context: ./frontend
+      args:
+        project_directory: "/frontend_projects/"
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    links:
+      - backend
+    volumes:
+      - "./frontend:/frontend_projects"
+    tty: true
+    environment:
+      TZ: "Asia/Tokyo"
+      FLASK_ENV: "development"
+    command: sh -c "cd /frontend_projects/app  && yarn start"
