@@ -5,7 +5,7 @@ WORKDIR $project_directory
 
 COPY /requirements.txt $project_directory
 
-RUN pip install -U pip
+RUN pip install -U pip setuptools wheel
 RUN pip --no-cache-dir install -r requirements.txt
 
 CMD ["/bin/sh"]
