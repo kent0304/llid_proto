@@ -34,11 +34,11 @@ class Model(nn.Module):
         ans = F.relu(self.ans_fc1(ans))
         ans = self.ans_fc2(ans)
 
-        input_feature = torch.cat([torch.squeeze(image), ans], axis=1)
+        input_feature = torch.cat([image, ans], axis=0)
 
         output = F.relu(self.total_fc1(input_feature))
-
         output = F.relu(self.total_fc2(output))
         output = self.total_fc3(output)
+        print(output)
 
         return output
