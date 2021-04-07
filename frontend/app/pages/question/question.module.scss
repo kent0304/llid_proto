@@ -1,0 +1,97 @@
+.question_card {
+    background-color: white;
+    position: absolute;
+    height: 63vh;
+    width: 60vw;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
+    border-radius : 2px;                  /* 角丸の指定           */
+}
+
+.question_title {
+    h2 {
+        position: absolute;
+        top: 1%;
+        left: 2%;
+        color: #111111;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.direction {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: #333333;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.question_image {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    // border        : 1px solid rgba(153, 153, 153, 0.96);   /* 枠線の指定           */
+}
+
+.given_key {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    color: #333333;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+}
+
+.answer_card {
+    background-color: white;
+    position: absolute;
+    height: 35vh;
+    width: 60vw;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定 */
+    border-radius : 2px;    
+}
+
+.answer_box {
+    position: absolute;
+    font-size: 2vh;
+    height: 20vh;
+    width: 55vw;
+    top: 27%;
+    left: 3%;
+    background: #FFFFFF;
+    border: 1px solid rgba(153, 153, 153, 0.36);
+}
+
