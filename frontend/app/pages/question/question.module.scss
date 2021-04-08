@@ -1,0 +1,81 @@
+.question_container {
+    padding-top: 15vh;
+}
+
+.question_card {
+    background-color: white;
+    height: 70vh;
+    width: 60vw;
+    margin: 5vh auto 2vh;
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
+    border-radius : 2px;                  /* 角丸の指定           */
+}
+
+.question_title {
+    h2 {
+        color: #555555;
+        font-family: Roboto;
+        margin-left: 2vw;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.direction {
+    color: #555555;
+    margin: 0 auto;
+    width: 50vw;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.question_image {
+    text-align: center;
+}
+
+.given_key {
+    color: #555555;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+  
+
+
+}
+
+.answer_card {
+    background-color: white;
+    margin: 2vh auto 5vh;
+    height: 42vh;
+    width: 60vw;
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定 */
+    border-radius : 2px;    
+}
+
+.answer_box {
+    font-size: 2vh;
+    margin-left: 3vw;
+    padding: 1vh 0 0 0.7vw;
+    height: 20vh;
+    width: 55vw;
+    background: #FFFFFF;
+    border: 1px solid rgba(153, 153, 153, 0.36);
+}
+
+.submit_button {
+    text-align: center;
+    margin-top: 2.5vh;
+}
+
