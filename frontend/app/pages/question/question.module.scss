@@ -1,24 +1,21 @@
+.question_container {
+    padding-top: 15vh;
+}
+
 .question_card {
     background-color: white;
-    position: absolute;
-    height: 63vh;
+    height: 70vh;
     width: 60vw;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%);
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
+    margin: 5vh auto 2vh;
     border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
     border-radius : 2px;                  /* 角丸の指定           */
 }
 
 .question_title {
     h2 {
-        position: absolute;
-        top: 1%;
-        left: 2%;
-        color: #111111;
+        color: #555555;
         font-family: Roboto;
+        margin-left: 2vw;
         font-style: normal;
         font-weight: normal;
         font-size: 28px;
@@ -29,10 +26,9 @@
 }
 
 .direction {
-    position: absolute;
-    top: 10%;
-    left: 5%;
-    color: #333333;
+    color: #555555;
+    margin: 0 auto;
+    width: 50vw;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -43,55 +39,43 @@
 }
 
 .question_image {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%);
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    // border        : 1px solid rgba(153, 153, 153, 0.96);   /* 枠線の指定           */
+    text-align: center;
 }
 
 .given_key {
-    position: absolute;
-    top: 88%;
-    left: 50%;
-    color: #333333;
+    color: #555555;
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 20px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    transform: translate(-50%);
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
+  
+
+
 }
 
 .answer_card {
     background-color: white;
-    position: absolute;
-    height: 35vh;
+    margin: 2vh auto 5vh;
+    height: 42vh;
     width: 60vw;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%);
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
     border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定 */
     border-radius : 2px;    
 }
 
 .answer_box {
-    position: absolute;
     font-size: 2vh;
+    margin-left: 3vw;
+    padding: 1vh 0 0 0.7vw;
     height: 20vh;
     width: 55vw;
-    top: 27%;
-    left: 3%;
     background: #FFFFFF;
     border: 1px solid rgba(153, 153, 153, 0.36);
+}
+
+.submit_button {
+    text-align: center;
+    margin-top: 2.5vh;
 }
 
