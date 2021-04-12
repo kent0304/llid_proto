@@ -52,7 +52,7 @@ const Question = () => {
                         ></textarea>
                     </div>
                     <div className={styles.submit_button}>
-                    <Submit content="解答する"/>
+                    <Submit content="解答する" link="answer"/>
                 </div>
                 </div>
                 

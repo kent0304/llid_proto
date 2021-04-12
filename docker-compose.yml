@@ -72,4 +72,4 @@ services:
     environment:
       TZ: "Asia/Tokyo"
       FLASK_ENV: "development"
-    command: sh -c "cd /frontend_projects/app  && yarn dev"
+    command: sh -c "cd /frontend_projects/app  && yarn start"
