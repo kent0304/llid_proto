@@ -1,0 +1,73 @@
+.question_container {
+    // float: left;
+    display: inline-block;
+    padding-top: 15vh;
+    margin-left: 3vw;
+}
+
+.question_card {
+    background-color: white;
+    height: 70vh;
+    width: 45vw;
+    margin: 5vh 0 2vh 0;
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
+    border-radius : 2px;                  /* 角丸の指定           */
+}
+
+.question_title {
+    h2 {
+        color: #555555;
+        font-family: Roboto;
+        margin-left: 2vw;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.direction {
+    color: #555555;
+    margin: 0 auto;
+    width: 40vw;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.question_image {
+    text-align: center;
+}
+
+.given_key {
+    color: #555555;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+.answer_container {
+    // float: right;
+    display: inline-block;
+    padding-top: 15vh;
+    margin-left: 3vw;
+}
+
+.answer_card {
+    background-color: white;
+    height: 70vh;
+    width: 45vw;
+    margin: 5vh 0 2vh 0;
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
+    border-radius : 2px;    
+}
