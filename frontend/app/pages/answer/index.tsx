@@ -16,8 +16,7 @@ const Answer = () => {
             </Head>
 
             <Header />
-        
-            <div className={styles.question_container}>
+            <div className={styles.answer_page}>
                 <div className={styles.question_card}>
                     <div className={styles.question_title}>
                         <h2>Question1</h2>
@@ -40,25 +39,46 @@ const Answer = () => {
                     </div>
                 </div>
 
-                <div className={styles.answer_container}>
-                    <div className={styles.answer_card}>
-                        <div className={styles.youranswer_box}>
-                            <h2>あなたの解答</h2>
-                
+                <div className={styles.answer_card}>
+                    <div className={styles.youranswer_box}>
+                        <h2 className={styles.fb_title}>あなたの解答</h2>
+                        <div className={styles.youranswer_content}>
+                            <p>n elephant is kissing a man by his cheak.</p>
                         </div>
+                    </div>
 
-                        <div className={styles.scoring_box}>
-                            <h2>採点結果</h2>
-                
+                    <div className={styles.scoring_box}>
+                        <h2 className={styles.fb_title}>採点結果</h2>
+                        <div className={styles.scoring_content}>
+                            <table>
+                                <tr>
+                                    <th>語句の使用</th>
+                                    <th>写真との関連度</th>
+                                    <th>適切な文法</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>0</td>
+
+                                </tr>
+                            </table>
                         </div>
+            
+                    </div>
 
-                        <div className={styles.answerex_box}>
-                            <h2>正答例</h2>
-                
+                    <div className={styles.answerex_box}>
+                        <h2 className={styles.fb_title}>正答例</h2>
+                        <div className={styles.answerex_content}>
+                            <p>An elephant is kissing a man by his cheak.</p>
                         </div>
                     </div>
                 </div>
+                <div className={styles.next_button}>
+                    <Submit content="次に進む" link="/"/>
+                </div>
                 
+                     
             </div>
             <Footer />
         </div>
