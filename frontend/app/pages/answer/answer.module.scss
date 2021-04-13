@@ -1,15 +1,18 @@
-.question_container {
-    // float: left;
-    display: inline-block;
+.answer_page {
+    width: 100vw;
     padding-top: 15vh;
-    margin-left: 3vw;
+  
+    // background-color: blueviolet;
 }
+
 
 .question_card {
     background-color: white;
+    vertical-align: top;
+    display: inline-block;
     height: 70vh;
-    width: 45vw;
-    margin: 5vh 0 2vh 0;
+    width: 44vw;
+    margin: 5vh 2vw;
     border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
     border-radius : 2px;                  /* 角丸の指定           */
 }
@@ -56,18 +59,82 @@
 }
 
 
-.answer_container {
-    // float: right;
-    display: inline-block;
-    padding-top: 15vh;
-    margin-left: 3vw;
-}
-
 .answer_card {
     background-color: white;
+    vertical-align: top;
+    display: inline-block;
     height: 70vh;
-    width: 45vw;
-    margin: 5vh 0 2vh 0;
+    width: 44vw;
+    margin: 5vh 2vw;
     border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
     border-radius : 2px;    
+}
+
+.youranswer_box {
+    height: 20vh;
+
+}
+
+.scoring_box {
+    height: 20vh;
+
+}
+
+.answer_box {
+    height: 20vh;
+
+}
+
+.fb_title {
+    color: #555555;
+    margin-left: 2vw;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+} 
+
+.youranswer_content {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 12vh;
+    margin: 0 2vw;
+    padding: 0 1vw;
+}
+
+.scoring_content {
+    table th, table td {
+        border: solid 1px black;
+        /*実線 1px 黒*/
+      }
+    table {
+        text-align: center;
+        border-collapse: collapse;
+        width: 39vw;
+        height: 12vh;
+        margin: 0 auto;
+
+    }
+    th {
+        color: #FF9800;/*文字色*/
+        background: #fff5e5;/*背景色*/
+        width: 13vw;
+      }
+    
+
+}
+
+.answerex_content {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 12vh;
+    margin: 0 2vw;
+    padding: 0 1vw;
+}
+
+.next_button {
+    text-align: center;
+    margin: 0 0 5vh 0;
 }
