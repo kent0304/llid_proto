@@ -8,16 +8,17 @@ import Footer from '../components/Footer';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Spidy</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Top />
-      <Footer />
+      <div className={styles.container}>
+        <Top />
+        <Footer />
       
- 
+      </div>
     </div>
   )
 }
