@@ -1,4 +1,4 @@
-# SPIDY v1.0
+# SPIDY🕷 v1.0
 This repository contains the automatic scoring system for picture description (SPIDY)
 
 
