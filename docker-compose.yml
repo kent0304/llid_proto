@@ -68,8 +68,9 @@ services:
       - backend
     volumes:
       - "./frontend:/frontend_projects"
+      - "/frontend_projects/node_modules/"
     tty: true
     environment:
       TZ: "Asia/Tokyo"
       FLASK_ENV: "development"
-    command: sh -c "cd /frontend_projects/app  && yarn start"
+    command: sh -c "cd /frontend_projects/app  && yarn run start"

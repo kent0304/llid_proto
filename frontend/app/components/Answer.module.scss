@@ -1,0 +1,172 @@
+.answer_page {
+    width: 100vw;
+    padding-top: 15vh;
+  
+    // background-color: blueviolet;
+}
+
+
+.question_card {
+    background-color: white;
+    vertical-align: top;
+    display: inline-block;
+    height: 70vh;
+    width: 44vw;
+    margin: 5vh 2vw;
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
+    border-radius : 2px;                  /* 角丸の指定           */
+}
+
+.question_title {
+    h2 {
+        color: #555555;
+        font-family: Roboto;
+        margin-left: 2vw;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.direction {
+    color: #555555;
+    margin: 0 auto;
+    width: 40vw;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.question_image {
+    text-align: center;
+}
+
+.given_key {
+    color: #555555;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+.answer_card {
+    background-color: white;
+    vertical-align: top;
+    display: inline-block;
+    height: 70vh;
+    width: 44vw;
+    margin: 5vh 2vw;
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
+    border-radius : 2px;    
+}
+
+.youranswer_box {
+    height: 20vh;
+
+}
+
+.scoring_box {
+    height: 20vh;
+
+}
+
+.answer_box {
+    height: 20vh;
+
+}
+
+.fb_title {
+    color: #555555;
+    margin-left: 2vw;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+} 
+
+.youranswer_content {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 6vh;
+    margin: 0 2vw;
+    padding: 0 1vw;
+}
+.gec_content {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 6vh;
+    margin: 0 2vw;
+    padding: 0 1vw;
+}
+
+.scoring_content {
+    table th, table td {
+        border: solid 1px black;
+        /*実線 1px 黒*/
+      }
+    table {
+        text-align: center;
+        border-collapse: collapse;
+        width: 39vw;
+        height: 12vh;
+        margin: 0 auto;
+
+    }
+    th {
+        color: #FF9800;/*文字色*/
+        background: #fff5e5;/*背景色*/
+        width: 13vw;
+      }
+    
+
+}
+
+.answerex_content {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 12vh;
+    margin: 0 2vw;
+    padding: 0 1vw;
+}
+
+.next_button {
+    text-align: center;
+    margin: 0 0 5vh 0;
+}
+
+.button {
+    width: 15vw;
+    height: 3.5vh;
+
+    background: #FFBA53;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #FFFFFF;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vh;
+}
+
+.gec_button_container {
+    text-align: center;
+    margin-top: 1vh; 
+}

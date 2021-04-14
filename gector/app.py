@@ -35,7 +35,7 @@ def tokenize(text):
 @app.route("/")
 def hello_world():
     print('hello world')
-    return '7000はGECToRのポートです。'
+    return '5002はGECToRのポートです。'
 
 @app.route("/gector", methods=['POST'])
 def predict(batch_size=32):
@@ -64,4 +64,4 @@ def predict(batch_size=32):
     return jsonify({"result": result})
     # return json['answer']
 
-#curl -X POST -H "Content-Type: application/json" -d '{"answer": "I went on the park woth my friend."}' localhost:7000/gector
+#curl -X POST -H "Content-Type: application/json" -d '{"answer": "I went on the park woth my friend."}' localhost:5002/gector

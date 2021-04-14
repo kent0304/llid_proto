@@ -2,3 +2,18 @@
     text-align: center;
     margin: 30vh;
 }
+
+.button {
+    width: 15vw;
+    height: 3.5vh;
+
+    background: #FFBA53;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #FFFFFF;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vh;
+}
