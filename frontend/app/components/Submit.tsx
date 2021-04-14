@@ -5,18 +5,19 @@ import Link from 'next/link';
 
 type Submit = {
     content: string
-    link: string
+    // link: string
+    onHandler: VoidFunction
 }
 
-const Submit = ( { content, link }: Submit ) => {
+const Submit = ( { content, onHandler }: Submit ) => {
     return (
         <div>
             <button
             className={styles.button}
+            onClick={onHandler}
             >
-                <Link href={link}>
-                        {content}
-                </Link>
+                {content}
+
             </button>
         </div>
     )

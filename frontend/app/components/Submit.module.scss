@@ -2,6 +2,7 @@
     // position: absolute;
     width: 12vw;
     height: 6vh;
+    display: inline-block;
 
     background: #FFBA53;
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -12,4 +13,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 2.2vh;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
 }
