@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
-import Head from 'next/head';
-import styles from "./answer.module.scss";
+import styles from "./Answer.module.scss";
 import Image from "next/image";
-import Submit from "../../components/Submit";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Submit from "./Submit";
 
-const Answer = () => {
+
+type Answer = {
+    orig: string 
+    result: string
+    onHandler: VoidFunction
+}
+
+const Answer = ({ orig, result, onHandler }: Answer ) => {
     const [answer, setAnswer] = useState("");
+    const [showGECButton, setShowGECButton] = useState(true);
+    const onGECHandler = () => {
+        setShowGECButton(false);
+    };
     return (
         <div>
-            <Head>
-                <title>Spidy</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-
-            <Header />
+           
             <div className={styles.answer_page}>
                 <div className={styles.question_card}>
                     <div className={styles.question_title}>
@@ -43,7 +46,21 @@ const Answer = () => {
                     <div className={styles.youranswer_box}>
                         <h2 className={styles.fb_title}>あなたの解答</h2>
                         <div className={styles.youranswer_content}>
-                            <p>n elephant is kissing a man by his cheak.</p>
+                            <p>{orig}</p>
+                        </div>
+                        <div className={styles.gec_content}>
+                            {showGECButton ? (
+                                <div className={styles.gec_button_container}>
+                                    <button
+                                        className={styles.button}
+                                        onClick={onGECHandler}
+                                        >
+                                            文法的な誤りを訂正する
+                                    </button>
+                                </div>
+                            ):(
+                                <p>{result}</p>
+                            )}  
                         </div>
                     </div>
 
@@ -75,12 +92,11 @@ const Answer = () => {
                     </div>
                 </div>
                 <div className={styles.next_button}>
-                    <Submit content="次に進む" link="/"/>
+                    <Submit content="次に進む" onHandler={onHandler}/>
                 </div>
                 
                      
             </div>
-            <Footer />
         </div>
     )
 }

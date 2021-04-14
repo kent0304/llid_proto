@@ -97,9 +97,21 @@
 } 
 
 .youranswer_content {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
-    height: 12vh;
+    height: 6vh;
+    margin: 0 2vw;
+    padding: 0 1vw;
+}
+.gec_content {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    height: 6vh;
     margin: 0 2vw;
     padding: 0 1vw;
 }
@@ -137,4 +149,24 @@
 .next_button {
     text-align: center;
     margin: 0 0 5vh 0;
+}
+
+.button {
+    width: 15vw;
+    height: 3.5vh;
+
+    background: #FFBA53;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #FFFFFF;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vh;
+}
+
+.gec_button_container {
+    text-align: center;
+    margin-top: 1vh; 
 }
