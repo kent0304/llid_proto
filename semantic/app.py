@@ -19,9 +19,9 @@ def cal():
     model = load_model()
     # 入力をjsonで取得
     input_json = request.get_json()
-    # input_json = {'text': "A train is going.", "img_id": 1}
+    # input_json = {'answer': "A train is going.", "img_id": 0}
     # テキストをembeddingに変換
-    txt_ebd = embedding(input_json["text"])
+    txt_ebd = embedding(input_json["answer"])
 
     # 画像のembedding取得
     with open("image.pkl", "rb") as f:
@@ -29,7 +29,7 @@ def cal():
 
     # 関連度計算
     pred, score = eval(model, img_ebd[input_json["img_id"]], txt_ebd)
-    result = {"predicted_value": format(pred, ".2f"), "score": str(score)}
+    result = {"semantic_score": format(pred, ".2f")}
     print(result)
     return jsonify(result)
 
@@ -51,11 +51,12 @@ def eval(model, img_ebd, txt_ebd):
     with torch.no_grad():
         print(img_ebd)
         pred = model(img_ebd, txt_ebd)
-    print(pred)
     pred = torch.squeeze(pred)
-
+    m = nn.Sigmoid()
+    pred = m(pred)
     pred = pred.detach().numpy().copy()
+    
     score = np.where(pred>0, 1, 0)
 
-    return pred, score
+    return pred*100, score
 

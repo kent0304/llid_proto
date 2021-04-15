@@ -7,15 +7,18 @@ import Submit from "./Submit";
 type Answer = {
     orig: string 
     result: string
+    keyJudge: boolean
+    semanticScore: number
     onHandler: VoidFunction
 }
 
-const Answer = ({ orig, result, onHandler }: Answer ) => {
+const Answer = ({ orig, result, keyJudge, semanticScore, onHandler }: Answer ) => {
     const [answer, setAnswer] = useState("");
     const [showGECButton, setShowGECButton] = useState(true);
     const onGECHandler = () => {
         setShowGECButton(false);
     };
+
     return (
         <div>
            
@@ -74,9 +77,9 @@ const Answer = ({ orig, result, onHandler }: Answer ) => {
                                     <th>適切な文法</th>
                                 </tr>
                                 <tr>
-                                    <td>1</td>
-                                    <td>1</td>
-                                    <td>0</td>
+                                    <td>{keyJudge ? (100): (0)}</td>
+                                    <td>{semanticScore}</td>
+                                    <td>-</td>
 
                                 </tr>
                             </table>
