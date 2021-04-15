@@ -12,6 +12,8 @@ import axios from "axios";
 
 const Question= () => {
     const [showAnswer, setShowAnswer] = useState(false);
+    const [keyJudge, setKeyJudge] = useState(false);
+    const [semanticScore, setSemanticScore] = useState(0.0);
     const [answer, setAnswer] = useState("");
     const [result, setResult] = useState("");
     const onShowAnswerHandler = () => {
@@ -24,12 +26,16 @@ const Question= () => {
         try {
             const response = await axios.post(
                 "http://localhost:5000/judge",
-                {answer: answer}
+                {answer: answer, 
+                img_id: 0,
+                key: "kiss"}
             );
             if (response.status === 200) {
                 const resData = await response.data;
                 console.log(resData);
-                setResult(resData.result);
+                setResult(resData.gector_result);
+                setKeyJudge(resData.key_judge);
+                setSemanticScore(resData.semantic_score);
 
                 console.log(result);
                 console.log("ここまで");
@@ -52,6 +58,8 @@ const Question= () => {
                 <Answer 
                     orig={answer} 
                     result={result}
+                    keyJudge={keyJudge}
+                    semanticScore={semanticScore}
                     onHandler={onHideAnswerHandler}
                 />
             ) : (
