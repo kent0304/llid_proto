@@ -1,12 +1,14 @@
-.next_button {
+.buttonlist {
     text-align: center;
-    margin: 30vh;
+    display: flex;
+    margin: 5vh 4vw;
+    list-style-type: none 
 }
 
 .button {
     width: 15vw;
     height: 3.5vh;
-
+    margin: 0 1vw;
     background: #FFBA53;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-sizing: border-box;
@@ -17,3 +19,4 @@
     font-weight: normal;
     font-size: 1.5vh;
 }
+
