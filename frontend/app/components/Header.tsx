@@ -6,18 +6,18 @@ const Header = () => {
     return (
         <div className={styles.header_container}>
             <Link href="/">
-                <h1 className={styles.header_title}>Picture Description</h1>
+                <h1 className={styles.header_title}>画像描写自動評価システム</h1>
             </Link>
             <nav className={styles.header_list}>
                 <ul>
                     <li>
                     <Link href="/">
-                        Home
+                        ホーム
                     </Link>
                     </li>
-                    <li>
+                    {/* <li>
                         My Page
-                    </li>
+                    </li> */}
                 </ul>
             </nav>
         </div>

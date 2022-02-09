@@ -13,47 +13,47 @@ services:
     volumes:
       - "./backend:/backend_projects"
     links:
-      - gector_flask
-      - semantic_flask
+      - llid_flask
     tty: true
     environment:
       TZ: "Asia/Tokyo"
       FLASK_ENV: "development"
     command: "flask run --host 0.0.0.0 --port 5000"
 
-  semantic_flask:
+  llid_flask:
     build:
-      context: ./semantic
+      context: ./llid
       args:
-        project_directory: "/semantic_projects/"
+        project_directory: "/llid_projects/"
     ports:
       - "5001:5001"
     expose:
       - "5001"
     volumes:
-      - "./semantic:/semantic_projects"
+      - "./llid:/llid_projects"
     tty: true
     environment:
       TZ: "Asia/Tokyo"
       FLASK_ENV: "development"
     command: "flask run --host 0.0.0.0 --port 5001"
 
-  gector_flask:
+  errant_flask:
     build:
-      context: ./gector
+      context: ./errant
       args:
-        project_directory: "/gector_projects/"
+        project_directory: "/errant_projects/"
     ports:
       - "5002:5002"
     expose:
       - "5002"
     volumes:
-      - "./gector:/gector_projects"
+      - "./errant:/errant_projects"
     tty: true
     environment:
       TZ: "Asia/Tokyo"
       FLASK_ENV: "development"
     command: "flask run --host 0.0.0.0 --port 5002"
+
 
   front:
     build:
@@ -73,4 +73,4 @@ services:
     environment:
       TZ: "Asia/Tokyo"
       FLASK_ENV: "development"
-    command: sh -c "cd /frontend_projects/app  && yarn run start"
+    command: sh -c "cd /frontend_projects/app  && yarn start"

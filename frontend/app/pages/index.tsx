@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Spidy</title>
+        <title>画像描写自動訂正システム</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Submit from "../../components/Submit";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Answer from "../../components/Answer";
 import Link from 'next/link';
 import axios from "axios";
 import { TailSpin } from 'react-loader-spinner'
@@ -20,7 +21,12 @@ const Question= () => {
 
     const [origHightlights, setOrigHightlights] = useState([-1]);
     const [corHightlights, setCorHightlights] = useState([-1]);
-
+    // useEffect(() => {
+    //     console.log("useEffect");
+    // }, []);
+    // interface ErrIdices {
+    //     [name: string]: number;
+    // }
     interface ErrTotal {
         [name: string]: any;
     }
@@ -46,7 +52,7 @@ const Question= () => {
             const response = await axios.post(
                 "http://localhost:5000/assess",
                 {composition: answer, 
-                id: "197"}
+                id: "356"}
             );
             if (response.status === 200) {
                 const resData = await response.data;
@@ -59,8 +65,11 @@ const Question= () => {
                 setCorHightlights(corTmp);
                 console.log("origHightlights",origHightlights);
                 console.log("corHightlights",corHightlights);
-
+                
+                console.log("----")
+                console.log("====")
                 console.log("errTotal",errTotal)
+                console.log("ここまで");
             }
         } catch (err) {
             console.log(err);
@@ -82,7 +91,7 @@ const Question= () => {
                 <div className={styles.question_container}>
                     <div className={styles.question_card}>
                         <div className={styles.question_title}>
-                            <h2>問題 1</h2>
+                            <h2>問題 2</h2>
                             <div className={styles.direction}>
                                 <p>画像の中の枠の部分（人や動物、食べ物、物体）について、それがどのような物でどういった状況で、どこにあるか、 何をしているか等、具体的に1文の英語で説明してください。</p>
                                 <ul>
@@ -96,10 +105,10 @@ const Question= () => {
                             </div>
                             <div className={styles.question_image}>
                                 <Image 
-                                    src={"/images/103966_48960.png"}
+                                    src={"/images/227554_23628.png"}
                                     alt={"question image"}
-                                    width={180}
-                                    height={220}
+                                    width={280}
+                                    height={230}
                                     
                                 />
                             </div>

@@ -1,21 +1,24 @@
-# SPIDY🕷 v0.1
-This repository contains the automatic scoring system for picture description (SPIDY)
+# LLID Feedback v0.8
+This repository contains the automatic assessment system for Image Description by Language Learners.
 
 
 ## Overview
-In language learning, training output skill such as speaking and writing is vital in order to retain the learned knowledge. However, scoring descriptive questions by humans would be costly,  and this is why automatic scoring systems attract attention. In this research, we try to realize an automatic scoring system for picture description. Concretely, (i) we first analyze the trends of errors that English learners would make, (ii) then create a pseudo dataset by artificially mimicking the errors, and (iii) finally consider a model that judges whether a given pair of a picture and a sentence is valid or not. In experiments, we trained the model with the created pseudo data and evaluate it with the answers provided by actual learners.
+We focus on image description and a corresponding assessment system for language learners. To achieve automatic assessment of image description, we construct a novel dataset, the Language Learner Image Description (LLID) dataset, which consists of images, their descriptions, and assessment annotations.
+Then, we propose a novel task of automatic error correction for image description, and we develop a baseline model that encodes multimodal information from a learner sentence with an image and accurately decodes a corrected sentence. Our experimental results show that the developed model can revise errors that cannot be revised without an image.
 
-## How to Score
-- Whether the key is used
-- Semantic scoring ([GitHub](https://github.com/kent0304/semantic-scoring))
-- Grammatical error correction ([Grammarly GitHub](https://github.com/grammarly/gector))
 
 ## Usage
-The easiest way to use SPIDY and its dependencies is using docker.
+The easiest way to use LLID Feedback and its dependencies is using docker.
 ```
 docker-compose build
 docker-compose up
 ```
 
-<img width="1436" alt="Screen Shot 2021-04-14 at 17 38 36" src="https://user-images.githubusercontent.com/29160373/114680613-54274d00-9d48-11eb-8511-7e001f0d0be1.png">
-<img width="1434" alt="Screen Shot 2021-04-14 at 17 38 50" src="https://user-images.githubusercontent.com/29160373/114680636-59849780-9d48-11eb-8701-c1a8bfc64bd2.png">
+
+## Pretrained Model and Image Features
+- Download pretrained model in 'llid/model'
+（以下のリンク先のllid_dataというフォルダの中身をllid/modelに置く）
+https://drive.google.com/drive/folders/1jXtTCGbbnoO8x-uEnwWjQHZe20fuyzjD?usp=sharing
+- Download pretrained image features in 'llid/data'
+（以下のリンク先のepoch_16.thというファイルをllid/modelに置く）
+https://drive.google.com/file/d/1-8zKLeULvVmYLVM2qYqSReGk2dJU6kNq/view?usp=sharing
