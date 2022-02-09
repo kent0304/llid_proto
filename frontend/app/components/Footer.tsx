@@ -4,7 +4,7 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
     return (
         <div className={styles.footter}>
-            © Copyright 2021 All rights reserved. Crafted by Kento Tanaka.
+            © Copyright 2022 All rights reserved. Crafted by Kento Tanaka.
         </div>
     )
 }
