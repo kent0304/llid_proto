@@ -5,7 +5,6 @@ import Image from "next/image";
 import Submit from "../../components/Submit";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import Answer from "../../components/Answer";
 import Link from 'next/link';
 import axios from "axios";
 import { TailSpin } from 'react-loader-spinner'
@@ -21,12 +20,7 @@ const Question= () => {
 
     const [origHightlights, setOrigHightlights] = useState([-1]);
     const [corHightlights, setCorHightlights] = useState([-1]);
-    // useEffect(() => {
-    //     console.log("useEffect");
-    // }, []);
-    // interface ErrIdices {
-    //     [name: string]: number;
-    // }
+
     interface ErrTotal {
         [name: string]: any;
     }
@@ -65,11 +59,8 @@ const Question= () => {
                 setCorHightlights(corTmp);
                 console.log("origHightlights",origHightlights);
                 console.log("corHightlights",corHightlights);
-                
-                console.log("----")
-                console.log("====")
+
                 console.log("errTotal",errTotal)
-                console.log("ここまで");
             }
         } catch (err) {
             console.log(err);
