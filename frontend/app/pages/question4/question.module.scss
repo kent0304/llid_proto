@@ -1,0 +1,131 @@
+.question_container {
+    padding-top: 9vh;
+}
+
+.question_card {
+    background-color: white;
+    height: 55vh;
+    width: 60vw;
+    margin: 2vh auto 0vh;
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定           */
+    border-radius : 2px;                  /* 角丸の指定           */
+}
+
+.question_title {
+    h2 {
+        color: #555555;
+        margin-left: 2vw;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 26px;
+        
+        align-items: center;
+        margin: 2vh 1.4vw 0vh;
+    }
+}
+
+.result_title{
+    h2 {
+        color: #555555;
+        margin-left: 2vw;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 21px;
+        align-items: center;
+        margin: 2.5vh 1.4vw 1vh;
+      
+    }
+}
+
+.direction {
+    color: #555555;
+    margin: 0 auto;
+    width: 50vw;
+    font-size: 16px;
+    line-height: 17px;
+
+    align-items: center;
+}
+
+.result_detail {
+    display: flex;
+    color: #555555;
+    margin: 0 auto;
+    width: 50vw;
+    font-size: 19px;
+    line-height: 20px;
+    align-items: center;
+    // border        : 1px solid rgba(153, 153, 153, 0.2);
+    // padding: 1.5vh 1vw;
+}
+.result_detail_w {
+    margin-right: 0.5vw;
+}
+.result_detail_w_red {
+    color: #ff0000;
+    margin-right: 0.5vw;
+    text-decoration:underline;
+    // text-decoration-color:#FF0000;/*下線を赤色*
+}
+
+.question_image {
+    text-align: center;
+}
+
+.answer_card {
+    background-color: white;
+    margin: 2vh auto 2vh;
+    height: 27vh;
+    width: 60vw;
+    border        : 1px solid rgba(153, 153, 153, 0.36);   /* 枠線の指定 */
+    border-radius : 2px;    
+}
+
+.answer_box {
+    font-size: 2vh;
+    margin-left: 3vw;
+    padding: 1vh 0 0 0.7vw;
+    margin-top: 2vh;
+    height: 8vh;
+    width: 55vw;
+    background: #FFFFFF;
+    border: 1px solid rgba(153, 153, 153, 0.36);
+}
+
+.submit_button {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+// .back_button_box {
+//     text-align: right;
+//     margin-top: 2vh;
+// }
+
+.back_button {
+    // width: 12vw;
+    // height: 6vh;
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0);
+    // box-sizing: border-box;
+    // border-radius: 5px;
+    color: rgba(153, 153, 153, 0.9);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.7vh;
+    margin: 0 0 0 50vw;
+    // padding: 0 auto;
+
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    color: rgba(58, 58, 58, 0.9);
+}
+.loader_msg {
+    margin-left: 6vw;
+}
