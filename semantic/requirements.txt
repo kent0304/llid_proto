@@ -1,5 +1,0 @@
-flask==1.1.2
-torch==1.7.1
-Pillow==7.2.0
-torchvision==0.8.2
-sentence-transformers==1.0.4
