@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import styles from "./question.module.scss";
 import Image from "next/image";
@@ -9,12 +9,9 @@ import Link from 'next/link';
 import axios from "axios";
 import { TailSpin } from 'react-loader-spinner'
 
-
-
-
 const Question= () => {
     const [showAnswer, setShowAnswer] = useState(false);
-    const [answer, setAnswer] = useState(" ");
+    const [answer, setAnswer] = useState("");
     const [ary, setAry] = useState(['']);
     const [result, setResult] = useState("");
 
@@ -34,14 +31,12 @@ const Question= () => {
         setResult("");
     };
 
-
-
     const onSendHandler = async () => {
         try {
-            const splitAnswer = answer.split(" ");
+            // 複数スペースを一つにする→先頭・末尾の空白除く→split
+            const splitAnswer = answer.replace(/(\s|&nbsp;)+/g," ").trim().split(" ");
             console.log("splitAnswer",splitAnswer);
             setAry(splitAnswer);
-            console.log("ary",ary);
             
             const response = await axios.post(
                 "http://localhost:5000/assess",
@@ -53,14 +48,9 @@ const Question= () => {
                 console.log("取得データ",resData);
                 setResult(resData.result);
                 setErrTotal(resData.errant);
-                const origTmp = errTotal["orig_highlights"]
-                const corTmp = errTotal["cor_highlights"]
-                setOrigHightlights(origTmp);
-                setCorHightlights(corTmp);
-                console.log("origHightlights",origHightlights);
-                console.log("corHightlights",corHightlights);
-
-                console.log("errTotal",errTotal)
+                const { orig_highlights, cor_highlights } = resData.errant.orig_highlights
+                setOrigHightlights(orig_highlights);
+                setCorHightlights(cor_highlights);
             }
         } catch (err) {
             console.log(err);
@@ -91,8 +81,6 @@ const Question= () => {
                                     <li>枠の部分以外を描写しても構いませんが、必ず枠の部分の情報を含めてください。</li>
                                     <li>作文データ中に個人を特定できるような情報を含めないでください。</li>
                                 </ul>
-                                
-
                             </div>
                             <div className={styles.question_image}>
                                 <Image 
@@ -100,7 +88,6 @@ const Question= () => {
                                     alt={"question image"}
                                     width={180}
                                     height={220}
-                                    
                                 />
                             </div>
                         </div>  
@@ -111,23 +98,22 @@ const Question= () => {
                                 <h2>あなたの解答</h2>
                                     {answer === ""  ? (
                                         <>
-                                            <p className={styles.result_detail}>　</p>
+                                            <p className={styles.result_detail} />
                                         </>
                                     ) : (
                                         <p className={styles.result_detail}>
-                                            {answer}
-                                            {/* {ary.map((w, idx) => {
-                                                if (origHightlights.includes(idx)) {
+                                            {/* {answer}  */}
+                                            {ary.map((w, idx) => {
+                                                if (origHightlights?.includes(idx)) {
                                                     return (
-                                                            <p className={styles.result_detail_w_red}>{w}</p>
+                                                        <span className={styles.result_detail_w_red} key={`${w}-${idx}`}>{w}</span>
                                                     )
                                                 } else {
                                                     return (
-                                                        <p className={styles.result_detail_w}>{w}</p>
+                                                        <span className={styles.result_detail_w} key={`${w}-${idx}`}>{w}</span>
                                                     )
                                                 }
-                                                
-                                            })}  */}
+                                            })}
                                         </p>
                                     )}
                             </div>
@@ -137,7 +123,7 @@ const Question= () => {
                                 <div className={styles.loader}>
                                     {result === "" ? (
                                         <>
-                                            <p className={styles.loader_msg}>添削中...　</p>
+                                            <p className={styles.loader_msg}>添削中... </p>
                                             <TailSpin color="grey" height={30} width={30} />
                                         </>
                                     ) : (
