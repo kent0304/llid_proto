@@ -37,6 +37,23 @@ services:
       FLASK_ENV: "development"
     command: "flask run --host 0.0.0.0 --port 5001"
 
+  errant_flask:
+    build:
+      context: ./errant
+      args:
+        project_directory: "/errant_projects/"
+    ports:
+      - "5002:5002"
+    expose:
+      - "5002"
+    volumes:
+      - "./errant:/errant_projects"
+    tty: true
+    environment:
+      TZ: "Asia/Tokyo"
+      FLASK_ENV: "development"
+    command: "flask run --host 0.0.0.0 --port 5002"
+
 
   front:
     build:
