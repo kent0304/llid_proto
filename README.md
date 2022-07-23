@@ -1,4 +1,4 @@
-# LLID Feedback v0.1
+# LLID Feedback Prototype
 This repository contains the automatic assessment system for Image Description by Language Learners.
 
 
